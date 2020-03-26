@@ -1,0 +1,25 @@
+{
+  "name": "generate-identicon",
+  "version": "1.0.0",
+  "description": "My Identicon Generator re-written in TypeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephenlin35/generate-identicon.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephenlin35/generate-identicon/issues"
+  },
+  "homepage": "https://github.com/stephenlin35/generate-identicon#readme",
+  "devDependencies": {
+    "@types/node": "12.12.31",
+    "tslint": "6.1.0",
+    "typescript": "3.8.3"
+  }
+}
