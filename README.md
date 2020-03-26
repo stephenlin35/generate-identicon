@@ -1,2 +1,2 @@
 # generate-identicon
-My Identicon Generator re-written in TypeScript.
+My Identicon Generator project re-written in TypeScript.
