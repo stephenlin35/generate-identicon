@@ -19,7 +19,12 @@
   "homepage": "https://github.com/stephenlin35/generate-identicon#readme",
   "devDependencies": {
     "@types/node": "12.12.31",
+    "@types/randomcolor": "0.5.4",
     "tslint": "6.1.0",
     "typescript": "3.8.3"
+  },
+  "dependencies": {
+    "crypto": "1.0.1",
+    "randomcolor": "0.5.4"
   }
 }

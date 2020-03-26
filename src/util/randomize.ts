@@ -1,3 +1,7 @@
+const _randomize = (length: number) => {
+  return Math.floor(Math.random() * length);
+};
+
 const generateRandomString = () => {
   const char_selection = "ABCDEFGHIJKLMNOPQRSTUVWXYZ123456789abcdefghijklmnopqrstuvwxyz";
   const output_length = _randomize(40);
@@ -8,10 +12,6 @@ const generateRandomString = () => {
   }
 
   return output;
-};
-
-const _randomize = (length: number) => {
-  return Math.floor(Math.random() * length);
 };
 
 export default generateRandomString;

@@ -1,5 +1,14 @@
-import generateString from "./util/randomize";
+const randomColor = require('randomcolor');
+const crypto = require('crypto');
+import { generateString, pattern } from "./util";
 
-console.log(generateString());
-console.log(generateString());
-console.log(generateString());
+const randomIdenticon = () => {
+  const color = randomColor();
+  const hash = crypto.createHash('sha1')
+    .update(generateString())
+    .digest('hex');
+  const tiles_array = 
+
+};
+
+export default randomIdenticon;
