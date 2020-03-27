@@ -1,14 +1,21 @@
-const randomColor = require('randomcolor');
-const crypto = require('crypto');
-import { generateString, pattern } from "./util";
+import generateIndenticon from "./util/index";
 
-const randomIdenticon = () => {
-  const color = randomColor();
-  const hash = crypto.createHash('sha1')
-    .update(generateString())
-    .digest('hex');
-  const tiles_array = 
+const $ = document;
+const randomizeBtn = $.querySelector<HTMLButtonElement>('#randomize');
+if (randomizeBtn === null) {
+  throw new Error('Randomize Identicon button not found');
+}
+randomizeBtn.addEventListener('click', generateIndenticon);
 
-};
+// const firstTile = $.querySelector<SVGRectElement>('#\\30-0');
+// if (firstTile === null) {
+//   console.log("tile 0-0 is not found");
+// } else {
+//   firstTile.setAttribute('fill', 'red');
+// }
 
-export default randomIdenticon;
+// const p = $.querySelector<HTMLParagraphElement>("p");
+// if (p === null) {
+//   throw new Error("Not found");
+// }
+// p.style.color = "red";

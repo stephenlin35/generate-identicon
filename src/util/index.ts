@@ -1,4 +1,3 @@
-import generateString from "./randomize";
-import pattern from "./pattern";
+import identicon from "./identicon";
 
-export { generateString, pattern };
+export default identicon;

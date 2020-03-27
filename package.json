@@ -20,8 +20,11 @@
   "devDependencies": {
     "@types/node": "12.12.31",
     "@types/randomcolor": "0.5.4",
+    "ts-loader": "6.2.2",
     "tslint": "6.1.0",
-    "typescript": "3.8.3"
+    "typescript": "3.8.3",
+    "webpack": "4.42.1",
+    "webpack-cli": "3.3.11"
   },
   "dependencies": {
     "crypto": "1.0.1",
