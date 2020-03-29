@@ -28,12 +28,8 @@ const _renderTiles = (tiles: boolean[]) => {
         if (tile === null) throw new Error('Tile not found');
         tile.setAttribute('fill', `${color}`);
 
-        if (j === 0) {
-          const mirror_tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j + 4}`);
-          if (mirror_tile === null) throw new Error('Mirror Tile not found');
-          mirror_tile.setAttribute('fill', `${color}`);
-        } else if (j === 1) {
-          const mirror_tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j + 2}`);
+        if (j === 0 || j === 1) {
+          const mirror_tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j === 0 ? j + 4 : j + 2}`);
           if (mirror_tile === null) throw new Error('Mirror Tile not found');
           mirror_tile.setAttribute('fill', `${color}`);
         }
