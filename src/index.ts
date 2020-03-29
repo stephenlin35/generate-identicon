@@ -3,7 +3,7 @@ import generateIndenticon from "./util/index";
 const $ = document;
 const randomizeBtn = $.querySelector<HTMLButtonElement>('#randomize');
 if (randomizeBtn === null) {
-  throw new Error('Randomize Identicon button not found');
+  throw new Error('Randomize button not found');
 }
 randomizeBtn.addEventListener('click', generateIndenticon);
 
@@ -13,9 +13,3 @@ randomizeBtn.addEventListener('click', generateIndenticon);
 // } else {
 //   firstTile.setAttribute('fill', 'red');
 // }
-
-// const p = $.querySelector<HTMLParagraphElement>("p");
-// if (p === null) {
-//   throw new Error("Not found");
-// }
-// p.style.color = "red";

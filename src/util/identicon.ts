@@ -5,16 +5,9 @@ import pattern from "./pattern";
 
 const $ = document;
 
-function* iterateTo(val: number) {
-  let i = 0;
-  while (i < val) {
-    yield i++;
-  }
-}
-
 const _clearTiles = () => {
   for (let i = 0; i < 5; i++) {
-    for (let j = 0; j < 3; j++) {
+    for (let j = 0; j < 5; j++) {
       const tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j}`);
       if (tile === null) throw new Error("Tile not found");
       tile.setAttribute('fill', '#efeded');
@@ -34,12 +27,21 @@ const _renderTiles = (tiles: boolean[]) => {
         const tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j}`);
         if (tile === null) throw new Error('Tile not found');
         tile.setAttribute('fill', `${color}`);
-        index++;
+
+        if (j === 0) {
+          const mirror_tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j + 4}`);
+          if (mirror_tile === null) throw new Error('Mirror Tile not found');
+          mirror_tile.setAttribute('fill', `${color}`);
+        } else if (j === 1) {
+          const mirror_tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j + 2}`);
+          if (mirror_tile === null) throw new Error('Mirror Tile not found');
+          mirror_tile.setAttribute('fill', `${color}`);
+        }
       }
+      index++;
     }
   }
 };
-
 
 const identicon = () => {
   const hash = crypto.createHash('sha1')
