@@ -19,6 +19,7 @@ My Identicon Generator project re-written in TypeScript.
   <img src="img/img10.png" alt="Identicon 1" width="100" height="100" />
   <img src="img/img11.png" alt="Identicon 1" width="100" height="100" />
   <img src="img/img12.png" alt="Identicon 1" width="100" height="100" />
+</div>
 <br />
 <div>  
   <img src="img/img13.png" alt="Identicon 1" width="100" height="100" />
