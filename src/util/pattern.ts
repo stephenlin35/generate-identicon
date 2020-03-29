@@ -1,7 +1,7 @@
 const _isEven = (n: number) => n % 2 === 0 ? true : false;
 
 const pattern = (hash: string) => {
-  let arr: boolean[] = [];
+  const arr: boolean[] = [];
 
   for (let i = 0; i < hash.length; i += 2) {
     const dec_val = parseInt(hash.substring(i, i + 2), 16);
