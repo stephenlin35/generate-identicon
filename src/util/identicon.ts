@@ -28,7 +28,7 @@ const _renderTiles = (tiles: boolean[]) => {
         if (tile === null) throw new Error('Tile not found');
         tile.setAttribute('fill', `${color}`);
 
-        if (j === 0 || j === 1) {
+        if (j < 2) {
           const mirror_tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j === 0 ? j + 4 : j + 2}`);
           if (mirror_tile === null) throw new Error('Mirror Tile not found');
           mirror_tile.setAttribute('fill', `${color}`);
