@@ -1,0 +1,15 @@
+{
+  "workbench.editorAssociations": [],
+  "launch": {},
+  "editor.tokenColorCustomizations": {
+    "comments": "#00a86b",
+    "textMateRules": [
+      {
+        "scope": "comment",
+        "settings": {
+          "fontStyle": ""
+        }
+      }
+    ]
+  }
+}

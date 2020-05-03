@@ -1,5 +1,5 @@
-const randomColor = require('randomcolor');
-const crypto = require('crypto');
+const randomColor = require("randomcolor");
+const crypto = require("crypto");
 import generateString from "./randomize";
 import pattern from "./pattern";
 
@@ -10,10 +10,12 @@ const _clearTiles = () => {
     for (let j = 0; j < 5; j++) {
       const tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j}`);
       if (tile === null) throw new Error("Tile not found");
-      tile.setAttribute('fill', '#efeded');
+      tile.setAttribute("fill", "#efeded");
     }
   }
 };
+
+/*fdsafdsa */
 
 const _renderTiles = (tiles: boolean[]) => {
   const color = randomColor();
@@ -25,13 +27,15 @@ const _renderTiles = (tiles: boolean[]) => {
     for (let j = 0; j < 3; j++) {
       if (tiles[index]) {
         const tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j}`);
-        if (tile === null) throw new Error('Tile not found');
-        tile.setAttribute('fill', `${color}`);
+        if (tile === null) throw new Error("Tile not found");
+        tile.setAttribute("fill", `${color}`);
 
         if (j < 2) {
-          const mirror_tile = $.querySelector<SVGRectElement>(`.\\3${i}-${j === 0 ? j + 4 : j + 2}`);
-          if (mirror_tile === null) throw new Error('Mirror Tile not found');
-          mirror_tile.setAttribute('fill', `${color}`);
+          const mirror_tile = $.querySelector<SVGRectElement>(
+            `.\\3${i}-${j === 0 ? j + 4 : j + 2}`
+          );
+          if (mirror_tile === null) throw new Error("Mirror Tile not found");
+          mirror_tile.setAttribute("fill", `${color}`);
         }
       }
       index++;
@@ -40,9 +44,7 @@ const _renderTiles = (tiles: boolean[]) => {
 };
 
 const identicon = () => {
-  const hash = crypto.createHash('sha1')
-    .update(generateString())
-    .digest('hex');
+  const hash = crypto.createHash("sha1").update(generateString()).digest("hex");
   const tiles_array = pattern(hash);
   _renderTiles(tiles_array);
 };
